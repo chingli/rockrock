@@ -1,0 +1,200 @@
+html {
+    font-size: 18px;
+}
+
+$frail: #f8fdf5;
+$frail-d: darken($frail, 3%);
+$frail-dd: darken($frail-d,10%);
+$frail-ddd: darken($frail-dd,10%);
+
+$sturdy: #21610b;
+$sturdy-l: lighten($sturdy, 10%);
+$sturdy-ll: lighten($sturdy-l, 20%);
+
+@import "bootstrap";
+
+/* Layout
+-------------------------------------------------- */
+// Narrow page
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+@media (min-width: 48rem) {
+  .container {
+    max-width: 46rem;
+  }
+}
+@media (max-width: 47rem) {
+	.container {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+}
+
+/* General
+-------------------------------------------------- */
+.text-muted {
+	color: #636c72;
+	a {
+		color: lighten($link-color, 30%);
+	}
+}
+pre {
+	padding: 0.5rem 0 0.5rem 1rem;
+	background-color: $code-bg;
+	@include border-radius(0.25rem);
+}
+
+/* Header
+-------------------------------------------------- */
+$site-title-color: $sturdy;
+.site-header {
+	padding-top: 3rem;
+	padding-bottom: 1rem;
+	text-align: center;
+    .site-title {
+        font-size: 4rem;
+        a {
+            text-decoration: none;
+            color: $site-title-color;
+        }
+    }
+    .blog-description {
+        font-size: 1.5rem;
+		color: $gray-light;
+    }
+}
+// Nav
+.main-nav {
+	margin-bottom: 1rem;
+	text-align: center;
+}
+.main-menu {
+	padding-left: 0;
+	list-style: none;
+	//font-size: 1.25rem;
+	line-height: 2.5rem;
+	border-top: 1px solid $frail-dd;
+	border-bottom: 1px solid $frail-dd;
+	li {
+		display: inline-block;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+	a {
+        color: $sturdy-l;
+	}
+}
+@media (max-width: 47rem) {
+	.site-header {
+		padding-top: 1rem;
+		padding-bottom: 0.5rem;
+		.site-title {
+			font-size: 3rem;
+		}
+		.blog-description {
+			font-size: 1rem;
+		}
+	}
+	.main-menu {
+		//font-size: 1.25rem;
+		line-height: 2rem;
+	}
+}
+
+/* Post
+-------------------------------------------------- */
+.post-meta {
+    font-size: 0.9rem;
+	padding: 0.25rem 0.5rem;
+	margin-bottom: 0.5rem;
+	text-align: right;
+    color: $gray-light;
+    background-color: $frail;
+    a {
+        color: #d2691e;
+    }
+}
+
+/* Home
+-------------------------------------------------- */
+.posts > .summary {
+	border-bottom: 4px solid $frail-d;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+div.read-more-link {
+    text-align: right;
+}
+
+/* Post list
+-------------------------------------------------- */
+.post-list {
+    line-height: 2rem;
+    .post-title {
+        font-size: 1.25rem;
+    }
+}
+
+/* Pager
+-------------------------------------------------- */
+.pager {
+    padding-left:0;
+    margin:	2rem 0;
+    list-style:none;
+    text-align:center;
+	color: $gray-light;
+    li {
+        display:inline;
+    }
+    li > a,
+    li > span {
+        display:inline-block;
+        padding:5px 14px;
+    }
+    li > a {
+        background-color: $frail;
+        border:1px solid $frail-dd;
+        border-radius:15px;
+    }
+    li > a:hover,
+    li > a:focus {
+        text-decoration:none;
+        background-color:#eeeeee;
+    }
+    .next > a,
+    .next > span {
+        float:right;
+    }
+    .previous > a,
+    .previous > span {
+        float:left;
+    }
+}
+
+@media (max-width: 32rem) {
+	.pager {
+		li > span,
+		.next > a,
+		.next > span,
+		.previous > a,
+		.previous > span {
+			display: block;
+			float: none;
+		}
+	}
+}
+
+/* Footer
+-------------------------------------------------- */
+.site-footer {
+    background-color: $frail-d;
+    border-top: 1px solid $frail-dd;
+	margin-top: 1rem;
+}
+.site-footer > .container {
+	padding: 2rem 1rem 1rem;
+}

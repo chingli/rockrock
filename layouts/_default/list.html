@@ -1,0 +1,9 @@
+{{ partial "header.html" . }}
+<div class="main-content container">
+    <ul class="posts">
+      {{ range .Data.Pages }}
+      <li class="post-list"><span class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></span>&nbsp;&nbsp;<span class="post-time">({{ .Date.Format "2006年1月2日" }})</span></li>
+      {{ end }}
+    </ul>
+</div>
+{{ partial "footer.html" . }}

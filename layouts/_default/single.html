@@ -1,0 +1,21 @@
+{{ partial "header.html" . }}
+<div class="main-content container">
+	<div class="post">
+		<h1 class="post-title">{{ .Title }}</h1>
+		<div class="post-meta">
+			{{ .Date.Format "2006年1月2日" }}
+			{{ range $index, $tag := .Params.tags }}
+			{{ if $index }}, {{ else }}&nbsp;//&nbsp;{{ end }}
+				<a href="/tags/{{ $tag | urlize }}">{{ $tag }}</a>
+			{{ end }}
+		</div>
+		{{ .Content }}
+	</div>
+	<ul class="pager">
+		{{with .Prev}} &nbsp;<li class="previous"><a href="{{.Permalink}}">«{{.Title}}</a></li>{{end}}
+		{{with .Next}} &nbsp;<li class="next"><a href="{{.Permalink}}">{{.Title}}»</a></li>{{end}}
+	</ul>
+	{{ partial "duoshuo.html" . }}
+</div>
+{{ partial "footer.html" . }}
+{{ partial "tail.html" . }}

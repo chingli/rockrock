@@ -1,0 +1,4 @@
+.DS_Store
+*.swp
+static/css/bootstrap
+static/css/.sass-cache

@@ -1,0 +1,27 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+$font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Noto Sans CJK SC", ans-serif;
+$font-family-serif:      "Times New Roman", Georgia, Times, "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Noto Sans CJK SC", serif;
+$font-family-monospace:  Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Noto Sans CJK SC", monospace;
+$font-family-base:       $font-family-serif;
+
+$link-color:            #cf1020;
+$link-hover-color:      darken($link-color, 15%);
+
+$font-size-h1: 2rem;
+$font-size-h2: 1.75rem;
+$font-size-h3: 1.5rem;
+$font-size-h4: 1.25rem;
+$font-size-h5: 1.125rem;
+$font-size-h6: 1rem;
+
+/* Code
+-------------------------------------------------- */
+$code-color:                  $gray-dark;
+$code-bg:                     $gray-lightest;
+
+img {
+  @include img-fluid;
+}

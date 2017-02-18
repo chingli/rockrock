@@ -1,0 +1,15 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/spf13/hugoThemes#themetoml for an example
+
+name = "RockRock"
+license = "MIT"
+licenselink = "https://github.com/chingli/rockrock/blob/master/LICENSE.md"
+description = "a hugo theme used by chingli.com"
+homepage = "https://github.com/chingli/rockrock"
+tags = ["blog", "minimalism", "duoshuo"]
+features = ["minimalism", "chinese"]
+min_version = 0.18
+
+[author]
+  name = "Chingli"
+  homepage = "http://www.chingli.com/"
