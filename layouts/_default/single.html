@@ -3,7 +3,7 @@
 	<div class="post">
 		<h1 class="post-title">{{ .Title }}</h1>
 		<div class="post-meta">
-			<p>{{ .Date.Format "2006年1月2日" }}{{ range $index, $tag := .Params.tags }}{{ if $index }},&nbsp;{{ else }}&nbsp;//&nbsp;{{ end }}<a href="/tags/{{ $tag | urlize }}">{{ $tag }}</a>{{ end }}</p>
+			<p>{{ .Date.Format "2006年1月2日" }}{{ range $index, $tag := .Params.tags }}{{ if $index }},&nbsp;{{ else }}&nbsp;//&nbsp;{{ end }}<a href="tags/{{ $tag | urlize }}">{{ $tag }}</a>{{ end }}</p>
 		</div>
 		{{ .Content }}
 	</div>

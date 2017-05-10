@@ -4,7 +4,7 @@
 	<div class="summary">
 		<h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 		<div class="post-meta">
-			<p>{{ .Date.Format "2006年1月2日" }}{{ range $index, $tag := .Params.tags }}{{ if $index }},&nbsp;{{ else }}&nbsp;//&nbsp;{{ end }}<a href="/tags/{{ $tag | urlize }}">{{ $tag }}</a>{{ end }}</p>
+			<p>{{ .Date.Format "2006年1月2日" }}{{ range $index, $tag := .Params.tags }}{{ if $index }},&nbsp;{{ else }}&nbsp;//&nbsp;{{ end }}<a href="tags/{{ $tag | urlize }}">{{ $tag }}</a>{{ end }}</p>
 		</div>
 		{{ .Summary }}
 		{{ if .Truncated }}
