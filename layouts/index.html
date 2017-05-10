@@ -1,33 +1,26 @@
 {{ partial "header.html" . }}
 <div class="main-content container">
-	<div class="posts">
-	{{ range (.Paginator 5).Pages }}
+	<div class="posts">{{ range (.Paginator 5).Pages }}
 	<div class="summary">
 		<h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 		<div class="post-meta">
-			{{ .Date.Format "2006年1月2日" }}
-			{{ range $index, $tag := .Params.tags }}
-			{{ if $index }}, {{ else }}&nbsp;//&nbsp;{{ end }}
-				<a href="/tags/{{ $tag | urlize }}">{{ $tag }}</a>
-			{{ end }}
+			<p>{{ .Date.Format "2006年1月2日" }}{{ range $index, $tag := .Params.tags }}{{ if $index }},&nbsp;{{ else }}&nbsp;//&nbsp;{{ end }}<a href="/tags/{{ $tag | urlize }}">{{ $tag }}</a>{{ end }}</p>
 		</div>
 		{{ .Summary }}
 		{{ if .Truncated }}
 		<div class="read-more-link">
-			<a href='{{ .RelPermalink }}'>阅读全文&raquo;</a>
+			<a href='{{ .Permalink }}'>阅读全文&raquo;</a>
 		</div>
 		{{ end }}
 	</div>
 	{{ end }}
 	</div>
 
-	<ul class="pager">
-		{{ with .Paginator }}
+	<ul class="pager">{{ with .Paginator }}
 		{{ if .HasPrev }}<li class="previous"><a href="{{ .Prev.URL }}">«更新文章</a></li>{{ end }}
 		<li><span class="page-number">第 {{ .PageNumber }} 页, 共 {{ .TotalPages }} 页</span></li>
 		{{ if .HasNext }}<li class="next"><a href="{{ .Next.URL }}">更旧文章»</a></li>{{ end }}
-		{{ end }}
-	</ul>
+	{{ end }}</ul>
 </div>
 {{ partial "footer.html" . }}
 {{ partial "tail.html" . }}

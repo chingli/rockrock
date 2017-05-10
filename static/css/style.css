@@ -1,5 +1,5 @@
 html {
-  font-size: 18px; }
+  font-size: 16px; }
 
 /*!
  * Bootstrap v4.0.0-alpha.6 (https://getbootstrap.com)
@@ -337,10 +337,10 @@ blockquote {
   margin: 0 0 1rem; }
 
 a {
-  color: #cf1020;
+  color: #295b78;
   text-decoration: none; }
   a:focus, a:hover {
-    color: #880b15;
+    color: #16303f;
     text-decoration: underline; }
 
 a:not([href]):not([tabindex]) {
@@ -450,13 +450,13 @@ h1, h2, h3, h4, h5, h6,
   color: inherit; }
 
 h1, .h1 {
-  font-size: 2rem; }
+  font-size: 1.875rem; }
 
 h2, .h2 {
-  font-size: 1.75rem; }
+  font-size: 1.625rem; }
 
 h3, .h3 {
-  font-size: 1.5rem; }
+  font-size: 1.375rem; }
 
 h4, .h4 {
   font-size: 1.25rem; }
@@ -626,10 +626,10 @@ pre {
   padding-left: 1rem;
   padding-right: 1rem; }
 
-@media (min-width: 48rem) {
+@media (min-width: 52rem) {
   .container {
-    max-width: 46rem; } }
-@media (max-width: 47rem) {
+    max-width: 52rem; } }
+@media (max-width: 51rem) {
   .container {
     padding-left: 0.5rem;
     padding-right: 0.5rem; } }
@@ -638,7 +638,7 @@ pre {
 .text-muted {
   color: #636c72; }
   .text-muted a {
-    color: #f5838c; }
+    color: #6daacd; }
 
 pre {
   padding: 0.5rem 0 0.5rem 1rem;
@@ -655,7 +655,7 @@ pre {
     font-size: 4rem; }
     .site-header .site-title a {
       text-decoration: none;
-      color: #21610b; }
+      color: #2D4059; }
   .site-header .blog-description {
     font-size: 1.5rem;
     color: #636c72; }
@@ -668,16 +668,16 @@ pre {
   padding-left: 0;
   list-style: none;
   line-height: 2.5rem;
-  border-top: 1px solid #d1f2be;
-  border-bottom: 1px solid #d1f2be; }
+  border-top: 1px solid #d0d5da;
+  border-bottom: 1px solid #d0d5da; }
   .main-menu li {
     display: inline-block;
     padding-left: 0.5rem;
     padding-right: 0.5rem; }
   .main-menu a {
-    color: #318f10; }
+    color: #364c6a; }
 
-@media (max-width: 47rem) {
+@media (max-width: 52rem) {
   .site-header {
     padding-top: 1rem;
     padding-bottom: 0.5rem; }
@@ -690,21 +690,24 @@ pre {
     line-height: 2rem; } }
 /* Post
 -------------------------------------------------- */
-.post-meta {
+.post {
+  padding-top: 2rem; }
+
+.post-meta p {
   font-size: 0.9rem;
   padding: 0.25rem 0.5rem;
   margin-bottom: 0.5rem;
   text-align: right;
   color: #636c72;
-  background-color: #f8fdf5; }
-  .post-meta a {
-    color: #d2691e; }
+  background-color: #f5f6f7; }
+  .post-meta p a {
+    color: #364c6a; }
 
 /* Home
 -------------------------------------------------- */
 .posts > .summary {
-  border-bottom: 4px solid #effae8;
-  padding-top: 1rem;
+  border-bottom: 4px solid #edeef0;
+  padding-top: 2rem;
   padding-bottom: 1rem; }
 
 div.read-more-link {
@@ -732,8 +735,8 @@ div.read-more-link {
     display: inline-block;
     padding: 5px 14px; }
   .pager li > a {
-    background-color: #f8fdf5;
-    border: 1px solid #d1f2be;
+    background-color: #f5f6f7;
+    border: 1px solid #d0d5da;
     border-radius: 15px; }
   .pager li > a:hover,
   .pager li > a:focus {
@@ -757,8 +760,8 @@ div.read-more-link {
 /* Footer
 -------------------------------------------------- */
 .site-footer {
-  background-color: #effae8;
-  border-top: 1px solid #d1f2be;
+  background-color: #edeef0;
+  border-top: 1px solid #d0d5da;
   margin-top: 1rem; }
 
 .site-footer > .container {

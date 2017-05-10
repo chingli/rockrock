@@ -1,0 +1,11 @@
+<!-- commento 评论框 -->
+{{ if .Site.Params.CommentoURL }}
+	<script src="{{ .Site.Params.CommentoURL }}/assets/commento.js"></script>
+	<script>
+		Commento.init({
+			serverUrl: "http://www.chingli.com:8080"
+		})
+	</script>
+	<div id="commento">
+	</div>
+{{ end }}
